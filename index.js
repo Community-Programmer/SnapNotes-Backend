@@ -9,6 +9,8 @@ const ejs = require('ejs');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+const PORT=process.env.port || 5050
+
 const app=express();
 dotenv.config()
 
@@ -30,7 +32,7 @@ app.get('/',(req,res)=>{
 mongoose.connect(process.env.DATABASE_CONNECTION_STRING)
 .then(()=>{
     
-    app.listen(5050,()=>{
+    app.listen(PORT,()=>{
         console.log("Server started and Connected To database")
     })
 })
