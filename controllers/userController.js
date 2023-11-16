@@ -61,7 +61,7 @@ const auth= async (req,res)=>{
     const {token}=req.cookies;
     jwt.verify(token,SECRET_KEY,{},(err,data)=>{
     if(data){
-        res.json(data)
+        res.json({data:data,ok:true})
     }
     if(err){
         res.json({message:"Not Authorized!",ok:false})
