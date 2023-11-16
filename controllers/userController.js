@@ -53,7 +53,7 @@ const signin=async (req,res)=>{
 }
 
 const logout = async (req,res)=>{
-    res.cookie('token','').json("Logout SuccessFull")
+    res.cookie('token',"").json("Logout SuccessFull")
 }
 
 
@@ -138,7 +138,7 @@ const resetToken=async (req,res)=>{
         }
         else{
             const token=jwt.sign({email:user.email,username:user.username},SECRET_KEY,{ expiresIn: 300 })
-            const resetlink=`http://127.0.0.1:5050/user/resetpassword/${token}`
+            const resetlink=`${process.env.CROSS_ORIGIN_URL}/user/resetpassword/${token}`
             sendmail(user.username,resetlink,email)
             res.status(200).json({message:"User Exist!"})
         }
