@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.reset{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40%;
+    height: 75%;
+    border: 1px solid rgb(184, 182, 182);
+    border-radius: 2rem;
+    padding: 1.5rem;
+
+}
+
+.content h2 span{
+    color: #00985D;
+}
+
+.form p{
+    color:#028d58
+}
+
+img{
+    width: 20%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-top: 10px;
+}
+
+.form input{
+    padding: 0.5rem;
+}
+
+.form label{
+    font-weight: bold;
+}
+
+.form button{
+    padding: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    background-color: #00DB82;
+    border: 1px solid #00985D;
+    border-radius: 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.form button:hover{
+    background-color: #00995E;
+    border: 1px solid #00DB82;
+  }
+
+
+  .alert{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 67%;
+    height: 50%;
+    display:none;
+    margin: auto;
+    padding: 8px;
+    align-items: center;
+    gap: 1rem;
+    
+  }
+
+  .message p{
+    margin-bottom: 10px;
+  }
+
+  .message h1{
+    margin-bottom: 10px;
+  }
+
+
+
+  @media screen and (max-width:1264px) {
+    .reset{
+        width: 70%;
+        height: 95%;
+        
+    }
+  }
+  @media screen and (max-width:1024px) {
+    
+    .alert{
+        flex-direction: column;
+    }
+
+    .message{
+        text-align: center;
+    }
+  }
+  @media screen and (max-width:1024px) and (min-width:768px) {
+    .reset{
+        width: 70%;
+        height: 90%;
+        
+    }
+    dotlottie-player{
+        width: 200px !important; 
+       
+    }
+    
+   
+  }
+  @media screen and (max-width:768px)and (min-width:468px) {
+
+    .alert{
+        flex-direction: column;
+    }
+
+    .reset{
+        width: 70%;
+        height: 85%;
+        
+    }
+    dotlottie-player{
+        width: 170px !important; 
+       
+    }
+  }
+  @media screen and (max-width:468px) {
+    .reset{
+        width: 95%;
+        height: 90%;
+        
+    }
+
+    dotlottie-player{
+        width: 150px !important; 
+       
+    }
+
+    img{
+        width: 30%;
+    }
+  }

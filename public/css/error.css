@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.alert{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 67%;
+    height: 50%;
+    display:flex;
+    margin: auto;
+    padding: 8px;
+    align-items: center;
+    gap: 1rem;
+    
+  }
+
+  .message p{
+    margin-bottom: 10px;
+  }
+
+  .message h1{
+    margin-bottom: 10px;
+  }
+
+
+ 
+  @media screen and (max-width:1024px) {
+    
+    .alert{
+        flex-direction: column;
+    }
+
+    .message{
+        text-align: center;
+    }
+  }
+  @media screen and (max-width:1024px) and (min-width:768px) {
+    
+    dotlottie-player{
+        width: 200px !important; 
+       
+    }
+    
+   
+  }
+  @media screen and (max-width:768px)and (min-width:468px) {
+
+    .alert{
+        flex-direction: column;
+    }
+
+    dotlottie-player{
+        width: 170px !important; 
+       
+    }
+  }
+  @media screen and (max-width:468px) {
+    .reset{
+        width: 95%;
+        height: 90%;
+        
+    }
+
+    dotlottie-player{
+        width: 150px !important; 
+       
+    }
+  }
