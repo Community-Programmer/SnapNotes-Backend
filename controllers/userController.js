@@ -53,8 +53,8 @@ const signin=async (req,res)=>{
 }
 
 const logout = async (req,res)=>{
-    res.clearCookie('token').json("Logout Successful");
     
+    res.cookie('token','',{ sameSite: 'None', secure: true }).json("Logout Successful")
 }
 
 
