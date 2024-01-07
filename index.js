@@ -16,7 +16,6 @@ dotenv.config()
 
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')));
-console.log(__dirname)
 
 app.use(cors({credentials:true,origin: process.env.CROSS_ORIGIN_URL}))
 app.use(express.json())
