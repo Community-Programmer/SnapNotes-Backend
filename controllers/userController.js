@@ -140,8 +140,8 @@ const resetToken=async (req,res)=>{
         }
         else{
             const token=jwt.sign({email:user.email,username:user.username},SECRET_KEY,{ expiresIn: 300 })
-            const resetlink=`${process.env.CROSS_ORIGIN_URL}/user/resetpassword/${token}`
-            sendmail(user.username,resetlink,email)
+            const resetlink=`${process.env.BACKEND_URL}/user/resetpassword/${token}`
+            await sendmail(user.username,resetlink,email)
             res.status(200).json({message:"User Exist!"})
         }
     } catch (error) {
