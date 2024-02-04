@@ -1,10 +1,11 @@
+const BACKEND_URL = 'https://snapnotes-backend.onrender.com'
+
 const updatepassword = async () => {
     const token = document.getElementById('token').value;
     const newpassword = document.getElementById('password').value;
-  //   const confirmpassword = document.getElementById('token').value;
-    console.log(token,newpassword)
 
-    const response = await fetch(`${process.env.BACKEND_URL}/user/updatepassword`, {
+
+    const response = await fetch(`${BACKEND_URL}/user/updatepassword`, {
       method: 'PATCH',
       headers: {
   'Content-Type': 'application/json',
