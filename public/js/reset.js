@@ -4,7 +4,7 @@ const updatepassword = async () => {
   //   const confirmpassword = document.getElementById('token').value;
     console.log(token,newpassword)
 
-    const response = await fetch('http://127.0.0.1:5050/user/updatepassword', {
+    const response = await fetch(`${process.env.BACKEND_URL}/user/updatepassword`, {
       method: 'PATCH',
       headers: {
   'Content-Type': 'application/json',
